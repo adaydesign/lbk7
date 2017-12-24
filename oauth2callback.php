@@ -21,7 +21,7 @@ if (! isset($_GET['code'])) {
   // $redirect_uri = 'http://' . $_SERVER['HTTP_HOST'] . '/lbkcbc/work_calendar_manage.php';
   // $redirect_uri = 'http://' . $_SERVER['HTTP_HOST'] . '/work_calendar_manage.php'; // v.1.1.94 host > http://www.lbkcbc.org
   $acc_token = serialize($client->getAccessToken());
-  $redirect_uri = 'http://localhost/lbkcbc/work_calendar_manage.php?acc_token=$acc_token';
+  $redirect_uri = "http://localhost/lbkcbc/work_calendar_manage.php?acc_token=$acc_token";
   header('Location: ' . filter_var($redirect_uri, FILTER_SANITIZE_URL));
 }
 
