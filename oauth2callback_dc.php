@@ -17,7 +17,7 @@ $client->setAuthConfigFile('client_secret_dc.json');
 $client->setRedirectUri('https://lbk7.herokuapp.com/oauth2callback_dc.php'); // use heroku server
 $client->setAccessType("offline");                          // offline access
 $client->setIncludeGrantedScopes(true);                     // incremental auth
-$client->addScope(Google_Service_Calendar::CALENDAR);
+$client->addScope(Google_Service_Drive::DRIVE);
 
 if (! isset($_GET['code'])) {
   $auth_url = $client->createAuthUrl();
