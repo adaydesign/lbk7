@@ -12,7 +12,7 @@ require_once __DIR__.'/vendor/autoload.php';
 session_start();
 
 $client = new Google_Client();
-$client->setAuthConfigFile('client_secret_dc.json');
+$client->setAuthConfigFile('client_secret_nw.json');
 
 $client->setRedirectUri('https://lbk7.herokuapp.com/oauth2callback_dc.php'); // use heroku server
 $client->setAccessType("offline");                          // offline access
