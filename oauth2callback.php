@@ -24,7 +24,7 @@ if (! isset($_GET['code'])) {
   header('Location: ' . filter_var($auth_url, FILTER_SANITIZE_URL));
 } else {
   $client->authenticate($_GET['code']);
-  $acc_token = serialize($client->getAccessToken());
+  $acc_token = base64_encode(serialize($client->getAccessToken()));
 
   $redirect_uri = "http://10.37.84.1/lbkcbc/work_calendar_access.php?token=$acc_token";
   header('Location: ' . filter_var($redirect_uri, FILTER_SANITIZE_URL));
